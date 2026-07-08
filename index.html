@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svetlana Voskresenskaia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Star Canvas -->
+    <canvas id="starCanvas"></canvas>
+    
+    <!-- Floating Galaxies -->
+    <div class="galaxy galaxy-1"></div>
+    <div class="galaxy galaxy-2"></div>
+    <div class="galaxy galaxy-3"></div>
+    <div class="galaxy galaxy-4"></div>
+    <div class="galaxy galaxy-5"></div>
+    
+    <!-- Navigation -->
+    <header>
+        <nav class="wrap">
+            <a href="#about" class="brand" aria-label="Svetlana Voskresenskaia">
+                <span class="logo">S<em>V</em><span class="d">.</span></span>
+            </a>
+            <div class="nav-links" id="links">
+                <a href="#about" class="nav-link active" data-page="about">About</a>
+                <a href="#publications" class="nav-link" data-page="publications">Publications</a>
+                <a href="#talks" class="nav-link" data-page="talks">Talks</a>
+                <a href="#software" class="nav-link" data-page="software">Software</a>
+                <button class="day-toggle" id="tgl" type="button" onclick="toggleMode()" aria-label="Toggle day or night"></button>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ABOUT / HOME -->
+        <section class="page active" id="about">
+            <div class="hero-content">
+                <div class="star-hero">
+                    <div class="wrap">
+                        <div class="hero-inner"></div>
+                        <div class="avatar"><img src="assets/images/myself.jpeg" alt="SV"></div>
+                        <div class="hero-text">
+                            <h1 class="hero-name">Svetlana<br>Voskresenskaia</h1>
+                            <div class="role">Astrophysicist · IKI RAS, Moscow · HSE University, Moscow</div>
+                            <p class="bio">Exploring galaxy clusters through multi-wavelength observations and machine learning</p>
+                            <div class="chips">
+                                <a href="https://orcid.org/0009-0000-9338-4047" target="_blank" rel="noopener">ORCID</a>
+                                <a href="https://scholar.google.com/citations?user=OYlOrP8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                                <a href="https://www.researchgate.net/profile/Svetlana_Voskresenskaia" target="_blank" rel="noopener">ResearchGate</a>
+                                <a href="https://github.com/lana-voskr" target="_blank" rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-hint">SCROLL<span>↓</span></div>
+            </div>
+
+            <!-- About Section -->
+            <section class="section" id="about-content">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>My research focuses on the formation, evolution and detection of galaxy clusters using X-ray, microwave and infrared/optic surveys. I develop machine learning methods for identifying galaxy clusters and estimating their physical properties from multi-wavelength observations.</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="tag">Galaxy clusters</span>
+                        <span class="tag">Catalogues</span>
+                        <span class="tag">Machine learning</span>
+                        <span class="tag">Galaxies</span>
+                        <span class="tag">Photometry</span>
+                        <span class="tag">Redshift Measurements</span>
+                        <span class="tag">SZ effect</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Topics -->
+            <section class="section section-alt" id="research">
+                <div class="container">
+                    <h2 class="section-title">Research Topics</h2>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <span class="research-number">01</span>
+                            <h3>Physical Properties of Galaxy Clusters</h3>
+                            <p>Studying scaling relations, mass estimates, SFR of galaxy clusters using SZ, optic, IK, X-ray surveys</p>
+                        </div>
+                        <div class="research-card">
+                            <span class="research-number">02</span>
+                            <h3>Machine Learning for Galaxy Cluster Detection</h3>
+                            <p>Developing deep learning pipelines for detecting galaxy clusters in multi-wavelength surveys (submillimeter, infrared WISE, X-ray), improving completeness and reducing false positives.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Publications -->
+        <section class="page" id="publications">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="sechead">Publications</h2>
+                    <p class="lead">Peer-reviewed papers and conference proceedings. Full list also on <a href="https://scholar.google.com/citations?user=OYlOrP8AAAAJ" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Google Scholar</a> and <a href="https://orcid.org/0009-0000-9338-4047" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">ORCID</a>.</p>
+                </div>
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <div class="pub-year">2026</div>
+                        <div class="pub-content">
+                            <h3>ComPACT: Mass-Redshift Properties of the galaxy cluster catalogue</h3>
+                            <p class="pub-authors"><strong>Voskresenskaia, S.</strong>, N. Lyskova et al.</p>
+                            <p class="pub-journal"><em>arXiv e-prints</em>, arXiv:2605.20027 [astro-ph.CO]</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2605.20027" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                                <a href="https://doi.org/10.48550/arXiv.2605.20027" target="_blank"><i class="fas fa-link"></i> DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3>ComPACT: combined Atacama Cosmology Telescope + Planck galaxy cluster catalogue</h3>
+                            <p class="pub-authors"><strong>Voskresenskaia, S.</strong>, A. Meshcheryakov and N. Lyskova</p>
+                            <p class="pub-journal"><em>MNRAS</em> 531.1, pp. 1998–2010</p>
+                            <div class="pub-links">
+                                <a href="https://arxiv.org/abs/2309.17077" target="_blank"><i class="fas fa-file-alt"></i> arXiv</a>
+                                <a href="https://doi.org/10.1093/mnras/stae1269" target="_blank"><i class="fas fa-link"></i> DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3>SRGz: Classification of eROSITA Point X-ray Sources in the 1% DESI Region and Calibration of Photometric Redshifts</h3>
+                            <p class="pub-authors">Meshcheryakov A. V., Khorunzhev G. A., <strong>Voskresenskaya S. A.</strong>et al.</p>
+                            <p class="pub-journal"><em>Astronomy Letters</em> 49.11, pp. 646–661</p>
+                            <div class="pub-links">
+                                <a href="https://doi.org/10.1134/S1063773723110129" target="_blank"><i class="fas fa-link"></i> DOI</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3>Most likely candidates for galaxy clusters in the PACT catalogue found using deep learning in the submillimetre range</h3>
+                            <p class="pub-authors"><strong>Voskresenskaia, S.A.</strong> et al.</p>
+                            <p class="pub-journal"><em>Physics of the Cosmos</em>: proceedings of the 51st All-Russian student scientific conference, pp. 110</p>
+                            <div class="pub-links">
+                                <span class="pub-type">Conference Proceedings</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Talks & Presentations -->
+        <section class="page" id="talks">
+            <div class="light-block">
+                <div class="wrap pad">
+                    <h2 class="section-title">Talks & Presentations with the last versions of presentations</h2>
+
+                    <div class="entry">
+                        <div class="figbox"><img src="assets/fig/header_longer.jpg" alt="figure" loading="lazy"></div>
+                        <div class="ec">
+                            <div class="meta-top">2025 · MOSCOW, RUSSIA · IN RUSSIAN</div>
+                            <h3>Измерение масс и красных смещений каталога скоплений галактик ComPACT</h3>
+                            <div class="title-en"></div>
+                            <div class="authors">Mass-Redshift Properties of the ComPACT galaxy cluster catalogue · oral</div>
+                            <p class="abstract">Determining mass and redshifts of comPACT catalogue</p>
+                            <div class="links"><a class="chip solid" href="talks/ComPACT_HEA_2025.pdf" target="_blank" rel="noopener">Slides (PDF)</a></div>
+                        </div>
+                    </div>  
+
+                    <div class="entry">
+                        <div class="figbox"><img src="assets/fig/MG17_poster.jpg" alt="figure" loading="lazy"></div>
+                        <div class="ec">
+                            <div class="meta-top">2024 · PESCARA, ITALY · IN ENGLISH</div>
+                            <h3>ComPACT: ACT+Planck galaxy cluster catalogue</h3>
+                            <p class="abstract">Detect galaxy cluster SZ signal by DL approach</p>
+                            <div class="links"><a class="chip solid" href="talks/Marcel_Grassman_2024.pdf" target="_blank" rel="noopener">Slides (PDF)</a></div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- SOFTWARE -->
+        <section class="page" id="software">
+            <div class="light-block">
+                <div class="wrap pad">
+                    <div class="section-head">
+                        <h2 class="sechead">Software codes</h2>
+                    </div>
+
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-icon"><i class="fas fa-brain"></i></div>
+                            <h3>Galaxy Cluster Detection</h3>
+                            <p>Leading a team developing an algorithm to classify galaxy clusters using various architectures: CNN, MLP and Transformer - and to compare their efficiencies on the infrared (IR) data of the WISE survey (W1, W2 bands) and the microwave data of ACT+Planck (f90, f150, f220 frequencies)</p>
+                            <a href="https://github.com/astromining/galaxyHackers" target="_blank" class="project-link"><i class="fab fa-github"></i> galaxyHackers</a>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-icon"><i class="fas fa-brain"></i></div>
+                            <h3>Galaxy Cluster DL SZ catalogue</h3>
+                            <p>Obtained in directions of SZcat by applying deep learning method to ACT+Planck maps to detect Sunyaev-Zeldovich effect</p>
+                            <a href="https://github.com/astromining/ComPACT" target="_blank" class="project-link"><i class="fab fa-github"></i> ComPACT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Svetlana Voskresenskaia</p>
+                <div class="footer-contact">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:voskr@cosmos.ru">voskr@cosmos.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
