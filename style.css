@@ -1,14 +1,14 @@
 /* === CSS Variables === */
 :root {
-    --bg: #1a1d3a;              /* было #0a0e27 — светлее и мягче */
+    --bg: #1a1d3a;
     --bg-secondary: #242850;
     --card: rgba(255,255,255,0.04);
     --text: #e4e4f0;
     --text-muted: #a8a8c4;
     --muted: #a8a8c4;
-    --accent: #b89cef;          /* было #c084fc — мягче */
+    --accent: #b89cef;
     --accent-light: #c9b0f5;
-    --primary: #e8917a;         /* было #ff7e5f — приглушённее */
+    --primary: #e8917a;
     --border: rgba(255,255,255,0.1);
     --dark: #1a1d3a;
 }
@@ -21,7 +21,7 @@ body {
 
 /* LIGHT THEME */
 body.light {
-    --bg: #f3f0f8;              /* лавандовый пастель */
+    --bg: #f3f0f8;
     --bg-secondary: #ffffff;
     --card: rgba(0,0,0,0.03);
     --text: #2d2a3e;
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Geologica', sans-serif;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
@@ -70,8 +70,8 @@ body {
 .galaxy {
     position: fixed;
     border-radius: 50%;
-    filter: blur(90px);         /* было 80px — сильнее размытие */
-    opacity: 0.22;              /* было 0.35 — значительно прозрачнее */
+    filter: blur(90px);
+    opacity: 0.22;
     z-index: 1;
     pointer-events: none;
     animation: floatGalaxy 25s ease-in-out infinite;
@@ -80,7 +80,7 @@ body {
 .galaxy-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #d48fb0 0%, transparent 70%);  /* приглушённый розовый */
+    background: radial-gradient(circle, #d48fb0 0%, transparent 70%);
     top: 10%;
     left: -10%;
     animation-delay: 0s;
@@ -89,7 +89,7 @@ body {
 .galaxy-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #9b85d6 0%, transparent 70%);  /* приглушённый фиолетовый */
+    background: radial-gradient(circle, #9b85d6 0%, transparent 70%);
     top: 40%;
     right: -8%;
     animation-delay: -5s;
@@ -98,7 +98,7 @@ body {
 .galaxy-3 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, #7fb5e0 0%, transparent 70%);  /* приглушённый голубой */
+    background: radial-gradient(circle, #7fb5e0 0%, transparent 70%);
     bottom: 15%;
     left: 20%;
     animation-delay: -10s;
@@ -107,7 +107,7 @@ body {
 .galaxy-4 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, #e0a08a 0%, transparent 70%);  /* приглушённый персиковый */
+    background: radial-gradient(circle, #e0a08a 0%, transparent 70%);
     top: 65%;
     right: 25%;
     animation-delay: -15s;
@@ -116,7 +116,7 @@ body {
 .galaxy-5 {
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, #b89cef 0%, transparent 70%);  /* приглушённая лаванда */
+    background: radial-gradient(circle, #b89cef 0%, transparent 70%);
     top: 20%;
     left: 50%;
     animation-delay: -20s;
@@ -216,7 +216,7 @@ body.light header.scrolled {
 }
 
 .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--text);
@@ -323,7 +323,7 @@ body.light .day-toggle {
     display: none;
     position: relative;
     z-index: 10;
-    padding-top: 120px; /* Отступ сверху, чтобы не залезало под header */
+    padding-top: 120px;
 }
 
 .page.active {
@@ -331,7 +331,6 @@ body.light .day-toggle {
     animation: fadeInPage 0.5s ease;
 }
 
-/* Первая страница (About) имеет свою hero-секцию, ей не нужен отступ */
 .page#about {
     padding-top: 0;
 }
@@ -385,7 +384,7 @@ body.light .day-toggle {
 }
 
 .hero-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: clamp(3rem, 8vw, 6.5rem);
     font-weight: 300;
     line-height: 1.1;
@@ -494,7 +493,7 @@ body.light .section-alt {
 }
 
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 400;
     text-align: center;
@@ -527,7 +526,7 @@ body.light .section-title {
 }
 
 .sechead {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 400;
     background: linear-gradient(135deg, #ffffff, #c084fc);
@@ -552,9 +551,8 @@ body.light .sechead {
 }
 
 /* === About Section === */
-/* === About Section === */
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 400;
     text-align: center;
@@ -575,7 +573,6 @@ body.light .sechead {
     margin: 1.5rem auto 0;
 }
 
-/* Разделительная линия после заголовка */
 #about-content .container > .section-title {
     position: relative;
     padding-bottom: 2rem;
@@ -619,7 +616,6 @@ body.light .sechead {
     line-height: 1.9;
 }
 
-/* Аватар справа от текста */
 .about-content .avatar {
     flex-shrink: 0;
     width: 200px;
@@ -637,7 +633,6 @@ body.light .sechead {
     object-fit: cover;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -710,7 +705,7 @@ body.light .sechead {
 }
 
 .research-number {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 3rem;
     font-weight: 300;
     color: rgba(255, 126, 95, 0.3);
@@ -720,7 +715,7 @@ body.light .sechead {
 }
 
 .research-card h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -798,7 +793,7 @@ body.light .entry {
 }
 
 .ec h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--text);
@@ -870,7 +865,7 @@ body.light .entry {
 }
 
 .pub-year {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 2rem;
     font-weight: 300;
     color: var(--primary);
@@ -987,7 +982,7 @@ body.light .entry {
 }
 
 .project-card h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Geologica', sans-serif;
     font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 1rem;
