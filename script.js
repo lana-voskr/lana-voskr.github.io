@@ -8,13 +8,13 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
 }
 
-// Палитра галактик
+// Палитра галактик — более пастельная
 const galaxyPalettes = [
-    { core: '#ffffff', glow: 'rgba(192, 132, 252, 0.9)', arm: 'rgba(192, 132, 252, 0.35)' }, // фиолетовая
-    { core: '#fff7d6', glow: 'rgba(255, 183, 120, 0.9)', arm: 'rgba(255, 170, 120, 0.35)' }, // тёплая
-    { core: '#e6f7ff', glow: 'rgba(120, 200, 255, 0.9)', arm: 'rgba(130, 200, 255, 0.35)' }, // голубая
-    { core: '#ffe6f0', glow: 'rgba(255, 140, 200, 0.9)', arm: 'rgba(255, 150, 210, 0.35)' }, // розовая
-    { core: '#ffffff', glow: 'rgba(255, 255, 255, 0.85)', arm: 'rgba(220, 220, 255, 0.3)' }  // белая
+    { core: '#f0e6ff', glow: 'rgba(184, 156, 239, 0.55)', arm: 'rgba(184, 156, 239, 0.18)' }, // лавандовая
+    { core: '#fff0e0', glow: 'rgba(232, 170, 140, 0.55)', arm: 'rgba(232, 170, 140, 0.18)' }, // персиковая
+    { core: '#e6f2ff', glow: 'rgba(140, 190, 230, 0.55)', arm: 'rgba(140, 190, 230, 0.18)' }, // голубая
+    { core: '#ffe8f0', glow: 'rgba(220, 150, 180, 0.55)', arm: 'rgba(220, 150, 180, 0.18)' }, // розовая
+    { core: '#f5f0ff', glow: 'rgba(200, 200, 230, 0.45)', arm: 'rgba(200, 200, 230, 0.15)' }  // серебристая
 ];
 
 function createGalaxies() {
@@ -48,19 +48,19 @@ function drawGalaxy(g) {
     ctx.save();
     ctx.translate(g.x, g.y);
     ctx.rotate(g.tilt);
-    ctx.globalAlpha = g.opacity;
+    ctx.globalAlpha = g.opacity * 0.75;  // было g.opacity — теперь мягче
 
-    // Внешнее свечение (ореол)
+    // Внешнее свечение (ореол) — более прозрачное
     const halo = ctx.createRadialGradient(0, 0, 0, 0, 0, g.size * 1.6);
     halo.addColorStop(0, g.palette.glow);
-    halo.addColorStop(0.4, g.palette.arm);
+    halo.addColorStop(0.5, g.palette.arm);
     halo.addColorStop(1, 'rgba(0, 0, 0, 0)');
     ctx.fillStyle = halo;
     ctx.beginPath();
     ctx.arc(0, 0, g.size * 1.6, 0, Math.PI * 2);
     ctx.fill();
 
-    // Спиральные рукава — рисуем точками по спирали Архимеда
+    // Спиральные рукава — менее контрастные
     const pointsPerArm = 80;
     const maxAngle = Math.PI * 3;
 
@@ -71,29 +71,30 @@ function drawGalaxy(g) {
             const angle = armOffset + t * maxAngle * g.spiralTightness;
             const radius = t * g.size;
 
-            // Небольшой «разброс» для естественности
             const jitter = (Math.random() - 0.5) * g.size * 0.08;
             const px = Math.cos(angle) * radius + jitter;
-            const py = Math.sin(angle) * radius * 0.55 + jitter; // сжатие по Y для наклона
+            const py = Math.sin(angle) * radius * 0.55 + jitter;
 
-            const alpha = (1 - t) * 0.9;
-            const r = (1 - t) * 1.6 + 0.4;
+            const alpha = (1 - t) * 0.55;   // было 0.9 — теперь рукава мягче
+            const r = (1 - t) * 1.4 + 0.3;  // было 1.6 — точки чуть меньше
 
             ctx.beginPath();
-            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.fillStyle = `rgba(240, 230, 255, ${alpha})`;  // было rgba(255,255,255,...) — более пастельный
             ctx.arc(px, py, r, 0, Math.PI * 2);
             ctx.fill();
         }
     }
 
-    // Яркое ядро
-    const core = ctx.createRadialGradient(0, 0, 0, 0, 0, g.size * 0.35);
+    // Ядро — мягкое, без резкого белого центра
+    const coreSize = g.size * 0.3;          // было 0.35
+    const core = ctx.createRadialGradient(0, 0, 0, 0, 0, coreSize);
     core.addColorStop(0, g.palette.core);
-    core.addColorStop(0.5, g.palette.glow);
+    core.addColorStop(0.35, g.palette.glow);  // плавный переход
     core.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.globalAlpha = g.opacity * 0.6;      // ядро ещё прозрачнее
     ctx.fillStyle = core;
     ctx.beginPath();
-    ctx.arc(0, 0, g.size * 0.35, 0, Math.PI * 2);
+    ctx.arc(0, 0, coreSize, 0, Math.PI * 2);
     ctx.fill();
 
     ctx.restore();

@@ -1,16 +1,16 @@
 /* === CSS Variables === */
 :root {
-    --bg: #0a0e27;
-    --bg-secondary: #141836;
-    --card: rgba(255,255,255,0.03);
-    --text: #e8e8f0;
-    --text-muted: #a0a0c0;
-    --muted: #a0a0c0;
-    --accent: #c084fc;
-    --accent-light: #d4a7ff;
-    --primary: #ff7e5f;
-    --border: rgba(255,255,255,0.08);
-    --dark: #0a0e27;
+    --bg: #1a1d3a;              /* было #0a0e27 — светлее и мягче */
+    --bg-secondary: #242850;
+    --card: rgba(255,255,255,0.04);
+    --text: #e4e4f0;
+    --text-muted: #a8a8c4;
+    --muted: #a8a8c4;
+    --accent: #b89cef;          /* было #c084fc — мягче */
+    --accent-light: #c9b0f5;
+    --primary: #e8917a;         /* было #ff7e5f — приглушённее */
+    --border: rgba(255,255,255,0.1);
+    --dark: #1a1d3a;
 }
 
 body {
@@ -21,12 +21,12 @@ body {
 
 /* LIGHT THEME */
 body.light {
-    --bg: #f6f7fb;
+    --bg: #f3f0f8;              /* лавандовый пастель */
     --bg-secondary: #ffffff;
-    --card: rgba(0,0,0,0.04);
-    --text: #1a1a2e;
-    --text-muted: #4b5563;
-    --muted: #4b5563;
+    --card: rgba(0,0,0,0.03);
+    --text: #2d2a3e;
+    --text-muted: #6b6880;
+    --muted: #6b6880;
     --border: rgba(0,0,0,0.08);
 }
 
@@ -65,8 +65,8 @@ body {
 .galaxy {
     position: fixed;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.35;
+    filter: blur(90px);         /* было 80px — сильнее размытие */
+    opacity: 0.22;              /* было 0.35 — значительно прозрачнее */
     z-index: 1;
     pointer-events: none;
     animation: floatGalaxy 25s ease-in-out infinite;
@@ -75,7 +75,7 @@ body {
 .galaxy-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #ff6b9d 0%, transparent 70%);
+    background: radial-gradient(circle, #d48fb0 0%, transparent 70%);  /* приглушённый розовый */
     top: 10%;
     left: -10%;
     animation-delay: 0s;
@@ -84,7 +84,7 @@ body {
 .galaxy-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+    background: radial-gradient(circle, #9b85d6 0%, transparent 70%);  /* приглушённый фиолетовый */
     top: 40%;
     right: -8%;
     animation-delay: -5s;
@@ -93,7 +93,7 @@ body {
 .galaxy-3 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, #4facfe 0%, transparent 70%);
+    background: radial-gradient(circle, #7fb5e0 0%, transparent 70%);  /* приглушённый голубой */
     bottom: 15%;
     left: 20%;
     animation-delay: -10s;
@@ -102,7 +102,7 @@ body {
 .galaxy-4 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, #ff7e5f 0%, transparent 70%);
+    background: radial-gradient(circle, #e0a08a 0%, transparent 70%);  /* приглушённый персиковый */
     top: 65%;
     right: 25%;
     animation-delay: -15s;
@@ -111,7 +111,7 @@ body {
 .galaxy-5 {
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, #c084fc 0%, transparent 70%);
+    background: radial-gradient(circle, #b89cef 0%, transparent 70%);  /* приглушённая лаванда */
     top: 20%;
     left: 50%;
     animation-delay: -20s;
@@ -138,8 +138,8 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(139,92,246,0.05), transparent 40%);
+    background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.03), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(184,156,239,0.04), transparent 40%);
     pointer-events: none;
     z-index: 0;
 }
