@@ -30,6 +30,11 @@ body.light {
     --border: rgba(0,0,0,0.08);
 }
 
+body.light {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+}
+
 /* === Reset & Base === */
 * {
     margin: 0;
@@ -132,6 +137,14 @@ h1, h2 {
 .project-card,
 .publication-item {
     box-shadow: 0 0 30px rgba(139,92,246,0.08);
+}
+
+body.light .research-card,
+body.light .project-card,
+body.light .publication-item,
+body.light .entry {
+    background: rgba(255,255,255,0.7) !important;
+    border-color: rgba(0,0,0,0.08) !important;
 }
 
 body::before {
@@ -287,6 +300,10 @@ body.light header.scrolled {
     transform: scale(1.1);
 }
 
+body.light .day-toggle {
+    border-color: rgba(0,0,0,0.15) !important;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -306,11 +323,17 @@ body.light header.scrolled {
     display: none;
     position: relative;
     z-index: 10;
+    padding-top: 120px; /* Отступ сверху, чтобы не залезало под header */
 }
 
 .page.active {
     display: block;
     animation: fadeInPage 0.5s ease;
+}
+
+/* Первая страница (About) имеет свою hero-секцию, ей не нужен отступ */
+.page#about {
+    padding-top: 0;
 }
 
 @keyframes fadeInPage {
@@ -403,6 +426,11 @@ body.light header.scrolled {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+body.light .chip {
+    border-color: rgba(0,0,0,0.15) !important;
+    color: var(--text) !important;
 }
 
 .chips a {
@@ -947,6 +975,10 @@ body.light .entry {
 
 .footer-contact a:hover {
     color: var(--accent);
+}
+
+body.light .footer {
+    background: var(--bg-secondary) !important;
 }
 
 /* === Animations on scroll === */

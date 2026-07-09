@@ -231,21 +231,32 @@ window.addEventListener('scroll', () => {
 
 
 // === Переключение темы ===
-const tgl = document.getElementById('tgl');
-
-function toggleMode() {
-    document.body.classList.toggle('light');
-    const isLight = document.body.classList.contains('light');
-    if (tgl) tgl.innerHTML = isLight ? '☀️' : '🌙';
-}
-
-window.toggleMode = toggleMode;
-
-if (tgl) {
-    tgl.innerHTML = document.body.classList.contains('light') ? '☀️' : '🌙';
-    tgl.addEventListener('click', toggleMode);
-}
-
+document.addEventListener('DOMContentLoaded', function() {
+    const tgl = document.getElementById('tgl');
+    
+    function toggleMode() {
+        document.body.classList.toggle('light');
+        const isLight = document.body.classList.contains('light');
+        
+        if (tgl) {
+            tgl.textContent = isLight ? '☀️' : '🌙';
+        }
+        
+        console.log('Theme switched:', isLight ? 'light' : 'dark');
+    }
+    
+    // Инициализация иконки при загрузке
+    if (tgl) {
+        const isLight = document.body.classList.contains('light');
+        tgl.textContent = isLight ? '☀️' : '🌙';
+        
+        // Добавляем обработчик клика
+        tgl.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMode();
+        });
+    }
+});
 
 // === Console ===
 // console.log('%c✨ Welcome to the cosmos! ✨', 'color: #ff7e5f; font-size: 20px; font-weight: bold;');
