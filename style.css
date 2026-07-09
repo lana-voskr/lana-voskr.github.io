@@ -356,31 +356,44 @@ body.light .day-toggle {
     width: 100%;
 }
 
+/* hero-inner – flex с текстом слева, аватаркой справа */
 .hero-inner {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    flex: 1 1 60%;
+    text-align: left;
+}
+
+.hero-text .bio {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero-text .chips {
+    justify-content: flex-start;
 }
 
 .avatar {
+    flex: 0 0 180px;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid rgba(192,132,252,0.3);
     box-shadow: 0 0 40px rgba(192,132,252,0.2);
-    margin-bottom: 1rem;
 }
 
 .avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.hero-text {
-    max-width: 700px;
 }
 
 .hero-name {
@@ -427,11 +440,6 @@ body.light .day-toggle {
     gap: 1rem;
 }
 
-body.light .chip {
-    border-color: rgba(0,0,0,0.15) !important;
-    color: var(--text) !important;
-}
-
 .chips a {
     color: var(--text);
     text-decoration: none;
@@ -450,6 +458,11 @@ body.light .chip {
     background: rgba(255, 126, 95, 0.1);
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(255, 126, 95, 0.2);
+}
+
+/* светлая тема – тёмно-серый контур для кнопок */
+body.light .chips a {
+    border-color: #6b6880;
 }
 
 .scroll-hint {
@@ -518,6 +531,15 @@ body.light .section-title {
     height: 2px;
     background: linear-gradient(90deg, var(--primary), var(--accent));
     margin: 1.5rem auto 0;
+}
+
+/* черточка над About Me */
+.section-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 0 auto 2rem;
+    border-radius: 2px;
 }
 
 .section-head {
@@ -1140,6 +1162,24 @@ body.light .footer {
     .figbox {
         width: 100%;
         height: 200px;
+    }
+
+    /* на мобилках hero перестраивается в колонку */
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text .chips {
+        justify-content: center;
+    }
+    .avatar {
+        flex: 0 0 160px;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
     }
 }
 

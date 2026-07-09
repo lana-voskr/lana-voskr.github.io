@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Svetlana Voskresenskaia</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- только один шрифт – Geologica -->
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <!-- Star Canvas -->
     <canvas id="starCanvas"></canvas>
-    
+
     <!-- Floating Galaxies -->
     <div class="galaxy galaxy-1"></div>
     <div class="galaxy galaxy-2"></div>
     <div class="galaxy galaxy-3"></div>
     <div class="galaxy galaxy-4"></div>
     <div class="galaxy galaxy-5"></div>
-    
+
     <!-- Navigation -->
     <header>
         <nav class="wrap">
@@ -47,17 +47,21 @@
             <div class="hero-content">
                 <div class="star-hero">
                     <div class="wrap">
-                        <div class="hero-inner"></div>
-                        <div class="avatar"><img src="assets\images\myself.png" alt="SV"></div>
-                        <div class="hero-text">
-                            <h1 class="hero-name">Svetlana<br>Voskresenskaia</h1>
-                            <div class="role">Astrophysicist · IKI RAS, Moscow · HSE University, Moscow</div>
-                            <p class="bio">Exploring galaxy clusters through multi-wavelength observations and machine learning</p>
-                            <div class="chips">
-                                <a href="https://orcid.org/0009-0000-9338-4047" target="_blank" rel="noopener">ORCID</a>
-                                <a href="https://scholar.google.com/citations?user=OYlOrP8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-                                <a href="https://www.researchgate.net/profile/Svetlana_Voskresenskaia" target="_blank" rel="noopener">ResearchGate</a>
-                                <a href="https://github.com/lana-voskr" target="_blank" rel="noopener">GitHub</a>
+                        <!-- hero-inner теперь flex-контейнер -->
+                        <div class="hero-inner">
+                            <div class="hero-text">
+                                <h1 class="hero-name">Svetlana<br />Voskresenskaia</h1>
+                                <div class="role">Astrophysicist · IKI RAS, Moscow · HSE University, Moscow</div>
+                                <p class="bio">Exploring galaxy clusters through multi-wavelength observations and machine learning</p>
+                                <div class="chips">
+                                    <a href="https://orcid.org/0009-0000-9338-4047" target="_blank" rel="noopener">ORCID</a>
+                                    <a href="https://scholar.google.com/citations?user=OYlOrP8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+                                    <a href="https://www.researchgate.net/profile/Svetlana_Voskresenskaia" target="_blank" rel="noopener">ResearchGate</a>
+                                    <a href="https://github.com/lana-voskr" target="_blank" rel="noopener">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="avatar">
+                                <img src="assets/images/myself.png" alt="SV" />
                             </div>
                         </div>
                     </div>
@@ -67,6 +71,8 @@
             <!-- About Section -->
             <section class="section" id="about-content">
                 <div class="container">
+                    <!-- черточка над заголовком -->
+                    <div class="section-divider"></div>
                     <h2 class="section-title">About Me</h2>
                     <div class="about-content">
                         <div class="about-text">
@@ -170,7 +176,7 @@
                     <h2 class="section-title">Talks with the last versions of presentations</h2>
 
                     <div class="entry">
-                        <div class="figbox"><img src="assets/images/header_longer.png" alt="figure" loading="lazy"></div>
+                        <div class="figbox"><img src="assets/images/header_longer.png" alt="figure" loading="lazy" /></div>
                         <div class="ec">
                             <div class="meta-top">2025 · MOSCOW, RUSSIA · IN RUSSIAN</div>
                             <h3>Измерение масс и красных смещений каталога скоплений галактик ComPACT</h3>
@@ -179,17 +185,17 @@
                             <p class="abstract">Determining mass and redshifts of comPACT catalogue</p>
                             <div class="links"><a class="chip solid" href="talks/ComPACT_HEA_2025.pdf" target="_blank" rel="noopener">Slides (PDF)</a></div>
                         </div>
-                    </div>  
+                    </div>
 
                     <div class="entry">
-                        <div class="figbox"><img src="assets/images/MG17_poster.png" alt="figure" loading="lazy"></div>
+                        <div class="figbox"><img src="assets/images/MG17_poster.png" alt="figure" loading="lazy" /></div>
                         <div class="ec">
                             <div class="meta-top">2024 · PESCARA, ITALY · IN ENGLISH</div>
                             <h3>ComPACT: ACT+Planck galaxy cluster catalogue</h3>
                             <p class="abstract">Detect galaxy cluster SZ signal by DL approach</p>
                             <div class="links"><a class="chip solid" href="talks/Marcel_Grassman_2024.pdf" target="_blank" rel="noopener">Slides (PDF)</a></div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </section>
