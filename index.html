@@ -24,13 +24,13 @@
     <header>
         <nav class="wrap">
             <a href="#about" class="brand" aria-label="Svetlana Voskresenskaia">
-                <span class="logo">S<em>V</em><span class="d">.</span></span>
+                <span class="logo">SV<span class="d"></span></span>
             </a>
             <div class="nav-links" id="links">
                 <a href="#about" class="nav-link active" data-page="about">About</a>
                 <a href="#publications" class="nav-link" data-page="publications">Publications</a>
                 <a href="#talks" class="nav-link" data-page="talks">Talks</a>
-                <a href="#software" class="nav-link" data-page="software">Software</a>
+                <a href="#software" class="nav-link" data-page="software">Software&Data</a>
                 <button class="day-toggle" id="tgl" type="button" aria-label="Toggle day or night">🌙</button>
             </div>
             <div class="hamburger">
@@ -200,24 +200,33 @@
             </div>
         </section>
 
-        <!-- SOFTWARE -->
+        <!-- SOFTWARE & Data -->
         <section class="page" id="software">
-            <div class="light-block">
-                <div class="wrap pad">
-                    <div class="section-head">
-                        <h2 class="sechead">Software codes</h2>
-                    </div>
+        <div class="light-block">
+            <div class="wrap pad">
+                <div class="section-head">
+                    <h2 class="sechead">Code &amp; Data</h2>
+                </div>
 
+                <!-- Code section -->
+                <div class="sub-section">
+                    <h3 class="sub-heading">Code</h3>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <div class="project-icon"><i class="fas fa-brain"></i></div>
+                            <div class="project-icon"><i class="fas fa-code"></i></div>
                             <h3>Galaxy Cluster Detection</h3>
                             <p>Leading a team developing an algorithm to classify galaxy clusters using various architectures: CNN, MLP and Transformer - and to compare their efficiencies on the infrared (IR) data of the WISE survey (W1, W2 bands) and the microwave data of ACT+Planck (f90, f150, f220 frequencies)</p>
                             <a href="https://github.com/astromining/galaxyHackers" target="_blank" class="project-link"><i class="fab fa-github"></i> galaxyHackers</a>
                         </div>
+                    </div>
+                </div>
 
+                <!-- Data section -->
+                <div class="sub-section">
+                    <h3 class="sub-heading">Data</h3>
+                    <div class="projects-grid">
                         <div class="project-card">
-                            <div class="project-icon"><i class="fas fa-brain"></i></div>
+                            <div class="project-icon"><i class="fas fa-database"></i></div>
                             <h3>Galaxy Cluster DL SZ catalogue</h3>
                             <p>Obtained in directions of SZcat by applying deep learning method to ACT+Planck maps to detect Sunyaev-Zeldovich effect</p>
                             <a href="https://github.com/astromining/ComPACT" target="_blank" class="project-link"><i class="fab fa-github"></i> ComPACT</a>
@@ -225,7 +234,8 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <!-- Footer -->
