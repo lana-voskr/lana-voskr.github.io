@@ -8,7 +8,7 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
 }
 
-// Палитра галактик — более пастельная
+// Палитра галактик
 const galaxyPalettes = [
     { core: '#f0e6ff', glow: 'rgba(184, 156, 239, 0.55)', arm: 'rgba(184, 156, 239, 0.18)' }, // лавандовая
     { core: '#fff0e0', glow: 'rgba(232, 170, 140, 0.55)', arm: 'rgba(232, 170, 140, 0.18)' }, // персиковая
