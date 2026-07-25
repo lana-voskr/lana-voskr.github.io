@@ -187,11 +187,11 @@ header {
     padding: 1.5rem 0;
     z-index: 1000;
     transition: all 0.4s ease;
-    /* вместо transparent – полупрозрачный фон с размытием */
-    background: rgba(10, 14, 39, 0.65);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Убираем фон и блюр для начального состояния */
+    background: transparent;
+    border-bottom: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 header nav.wrap {
@@ -214,10 +214,10 @@ header.scrolled {
 
 /* Светлая тема для навигации */
 body.light header {
-    background: rgba(246, 247, 251, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: transparent;
+    border-bottom: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 body.light header.scrolled {
@@ -476,6 +476,16 @@ body.light .day-toggle {
 
 body.light .chips a {
     border-color: #6b6880;
+}
+
+.chips a.cv-btn {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    border: none;
+    font-weight: 600;
+}
+body.light .chips a.cv-btn {
+    color: white; 
 }
 
 .scroll-hint {
@@ -1167,6 +1177,8 @@ body.light .footer {
         width: 180px;
         height: 180px;
         margin: 0 auto;
+        order: -1; /* <-- Эта строчка поднимает аватарку наверх */
+        margin-bottom: 1.5rem; /* Добавляем отступ снизу, чтобы текст не прилипал к фото */
     }
 }
 
