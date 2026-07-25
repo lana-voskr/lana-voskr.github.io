@@ -1167,8 +1167,8 @@ body.light .footer {
         width: 180px;
         height: 180px;
         margin: 0 auto;
-        order: -1; /* <-- Эта строчка поднимает аватарку наверх */
-        margin-bottom: 1.5rem; /* Добавляем отступ снизу, чтобы текст не прилипал к фото */
+        order: -1; 
+        margin-bottom: 1.5rem;
     }
 }
 
